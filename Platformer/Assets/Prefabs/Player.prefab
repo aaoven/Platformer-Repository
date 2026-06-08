@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3224947192091632672}
   - component: {fileID: 3321158991390690531}
   - component: {fileID: 3184541801011389103}
+  - component: {fileID: 7091636961034040280}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -82,7 +83,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 08765ae5e4c050740b63e01b9bfb026a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -206,9 +207,23 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 5
-  jumpPower: 8
+  speed: 8
+  jumpPower: 16
   wallCheck: {fileID: 716852118610206221}
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
+  wallJumpingDuration: 0.2
+  wallJumpingPower: {x: 5, y: 8}
+--- !u!114 &7091636961034040280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4363836445772410882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfae9abec4a69b46b061bac349e9ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
