@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8626786187469241902
 SpriteRenderer:
@@ -120,10 +120,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.002667904, y: 0.0005328655}
+  - {x: 0.20301938, y: 0.1795423}
+  - {x: 0.23143744, y: 0.27904916}
   - {x: 0.52452254, y: 0.9956126}
-  - {x: 0.9954343, y: 0.0036478043}
-  - {x: 0.0025217533, y: 0.0008831024}
+  - {x: 0.8246522, y: 0.17924094}
+  - {x: 0.1994977, y: 0.17756414}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
