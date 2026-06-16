@@ -14,6 +14,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private Rigidbody2D body;
     private BoxCollider2D boxCollider;
 
@@ -60,6 +67,7 @@ public class Player : MonoBehaviour
         if (jumping)
         {
             jump();
+            
         }
         
 
@@ -98,12 +106,15 @@ public class Player : MonoBehaviour
         if (isGrounded())
         {
             body.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+            audioManager.PlaySFX(audioManager.jump);
         }
         else if (isWallSliding)
         {
             isWallJumping = true;
             Invoke("stopWallJumping", wallJumpingDuration);
+            audioManager.PlaySFX(audioManager.jump);
         }
+        
 
         jumping = false;
     }

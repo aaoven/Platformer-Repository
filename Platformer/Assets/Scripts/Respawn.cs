@@ -8,11 +8,16 @@ public class Respawn : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D playerRb;
 
+    AudioManager audioManager;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerRb = GetComponent<Rigidbody2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
+    
+
     void Start()
     {
         startPos = transform.position;
@@ -24,6 +29,7 @@ public class Respawn : MonoBehaviour
         if (collision.CompareTag("Hazard"))
         {
             Die();
+            audioManager.PlaySFX(audioManager.death);
         }
     }
 
